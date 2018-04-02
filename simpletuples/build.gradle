@@ -3,3 +3,11 @@ apply plugin: 'java-library'
 
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+
+
+tasks.withType(JavaCompile) {
+    options.bootClasspath = "${System.properties['java.home']}/lib/rt.jar"
+}
+
+
+//apply from: 'publish/publish.gradle'
