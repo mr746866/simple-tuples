@@ -1,8 +1,7 @@
 package com.github.mr746866.simpletuples;
 
 
-public final class Tuple8<A, B, C, D, E, F, G, H>
-{
+public final class Tuple8<A, B, C, D, E, F, G, H> {
     public final A first;
     public final B second;
     public final C third;
@@ -15,15 +14,13 @@ public final class Tuple8<A, B, C, D, E, F, G, H>
     // MARK:
 
     public static <A, B, C, D, E, F, G, H> Tuple8<A, B, C, D, E, F, G, H> of(
-        A first, B second, C third, D fourth, E fifth, F sixth, G seventh, H eighth)
-    {
+        A first, B second, C third, D fourth, E fifth, F sixth, G seventh, H eighth) {
         return new Tuple8<>(first, second, third, fourth, fifth, sixth, seventh, eighth);
     }
 
     // MARK:
 
-    private Tuple8(A first, B second, C third, D fourth, E fifth, F sixth, G seventh, H eighth)
-    {
+    private Tuple8(A first, B second, C third, D fourth, E fifth, F sixth, G seventh, H eighth) {
         this.first = first;
         this.second = second;
         this.third = third;
@@ -37,53 +34,50 @@ public final class Tuple8<A, B, C, D, E, F, G, H>
     // MARK:
 
     @Override
-    public boolean equals(Object o)
-    {
-        if (this == o)
-        {
+    public boolean equals(Object o) {
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass())
-        {
+
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
 
         final Tuple8<?, ?, ?, ?, ?, ?, ?, ?> tuple8 = (Tuple8<?, ?, ?, ?, ?, ?, ?, ?>) o;
 
-        if (first != null ? !first.equals(tuple8.first) : tuple8.first != null)
-        {
+        if (first != null ? !first.equals(tuple8.first) : tuple8.first != null) {
             return false;
         }
-        if (second != null ? !second.equals(tuple8.second) : tuple8.second != null)
-        {
+
+        if (second != null ? !second.equals(tuple8.second) : tuple8.second != null) {
             return false;
         }
-        if (third != null ? !third.equals(tuple8.third) : tuple8.third != null)
-        {
+
+        if (third != null ? !third.equals(tuple8.third) : tuple8.third != null) {
             return false;
         }
-        if (fourth != null ? !fourth.equals(tuple8.fourth) : tuple8.fourth != null)
-        {
+
+        if (fourth != null ? !fourth.equals(tuple8.fourth) : tuple8.fourth != null) {
             return false;
         }
-        if (fifth != null ? !fifth.equals(tuple8.fifth) : tuple8.fifth != null)
-        {
+
+        if (fifth != null ? !fifth.equals(tuple8.fifth) : tuple8.fifth != null) {
             return false;
         }
-        if (sixth != null ? !sixth.equals(tuple8.sixth) : tuple8.sixth != null)
-        {
+
+        if (sixth != null ? !sixth.equals(tuple8.sixth) : tuple8.sixth != null) {
             return false;
         }
-        if (seventh != null ? !seventh.equals(tuple8.seventh) : tuple8.seventh != null)
-        {
+
+        if (seventh != null ? !seventh.equals(tuple8.seventh) : tuple8.seventh != null) {
             return false;
         }
+
         return eighth != null ? eighth.equals(tuple8.eighth) : tuple8.eighth == null;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         int result = first != null ? first.hashCode() : 0;
         result = 31 * result + (second != null ? second.hashCode() : 0);
         result = 31 * result + (third != null ? third.hashCode() : 0);
@@ -97,8 +91,7 @@ public final class Tuple8<A, B, C, D, E, F, G, H>
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Tuple8{"
             + "first=" + first
             + ", second=" + second

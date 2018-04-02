@@ -1,8 +1,7 @@
 package com.github.mr746866.simpletuples;
 
 
-public final class Tuple9<A, B, C, D, E, F, G, H, I>
-{
+public final class Tuple9<A, B, C, D, E, F, G, H, I> {
     public final A first;
     public final B second;
     public final C third;
@@ -16,15 +15,13 @@ public final class Tuple9<A, B, C, D, E, F, G, H, I>
     // MARK:
 
     public static <A, B, C, D, E, F, G, H, I> Tuple9<A, B, C, D, E, F, G, H, I> of(
-        A first, B second, C third, D fourth, E fifth, F sixth, G seventh, H eighth, I ninth)
-    {
+        A first, B second, C third, D fourth, E fifth, F sixth, G seventh, H eighth, I ninth) {
         return new Tuple9<>(first, second, third, fourth, fifth, sixth, seventh, eighth, ninth);
     }
 
     // MARK:
 
-    private Tuple9(A first, B second, C third, D fourth, E fifth, F sixth, G seventh, H eighth, I ninth)
-    {
+    private Tuple9(A first, B second, C third, D fourth, E fifth, F sixth, G seventh, H eighth, I ninth) {
         this.first = first;
         this.second = second;
         this.third = third;
@@ -39,57 +36,54 @@ public final class Tuple9<A, B, C, D, E, F, G, H, I>
     // MARK:
 
     @Override
-    public boolean equals(Object o)
-    {
-        if (this == o)
-        {
+    public boolean equals(Object o) {
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass())
-        {
+
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
 
         final Tuple9<?, ?, ?, ?, ?, ?, ?, ?, ?> tuple9 = (Tuple9<?, ?, ?, ?, ?, ?, ?, ?, ?>) o;
 
-        if (first != null ? !first.equals(tuple9.first) : tuple9.first != null)
-        {
+        if (first != null ? !first.equals(tuple9.first) : tuple9.first != null) {
             return false;
         }
-        if (second != null ? !second.equals(tuple9.second) : tuple9.second != null)
-        {
+
+        if (second != null ? !second.equals(tuple9.second) : tuple9.second != null) {
             return false;
         }
-        if (third != null ? !third.equals(tuple9.third) : tuple9.third != null)
-        {
+
+        if (third != null ? !third.equals(tuple9.third) : tuple9.third != null) {
             return false;
         }
-        if (fourth != null ? !fourth.equals(tuple9.fourth) : tuple9.fourth != null)
-        {
+
+        if (fourth != null ? !fourth.equals(tuple9.fourth) : tuple9.fourth != null) {
             return false;
         }
-        if (fifth != null ? !fifth.equals(tuple9.fifth) : tuple9.fifth != null)
-        {
+
+        if (fifth != null ? !fifth.equals(tuple9.fifth) : tuple9.fifth != null) {
             return false;
         }
-        if (sixth != null ? !sixth.equals(tuple9.sixth) : tuple9.sixth != null)
-        {
+
+        if (sixth != null ? !sixth.equals(tuple9.sixth) : tuple9.sixth != null) {
             return false;
         }
-        if (seventh != null ? !seventh.equals(tuple9.seventh) : tuple9.seventh != null)
-        {
+
+        if (seventh != null ? !seventh.equals(tuple9.seventh) : tuple9.seventh != null) {
             return false;
         }
-        if (eighth != null ? !eighth.equals(tuple9.eighth) : tuple9.eighth != null)
-        {
+
+        if (eighth != null ? !eighth.equals(tuple9.eighth) : tuple9.eighth != null) {
             return false;
         }
+
         return ninth != null ? ninth.equals(tuple9.ninth) : tuple9.ninth == null;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         int result = first != null ? first.hashCode() : 0;
         result = 31 * result + (second != null ? second.hashCode() : 0);
         result = 31 * result + (third != null ? third.hashCode() : 0);
@@ -104,8 +98,7 @@ public final class Tuple9<A, B, C, D, E, F, G, H, I>
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Tuple9{"
             + "first=" + first
             + ", second=" + second

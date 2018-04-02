@@ -1,8 +1,7 @@
 package com.github.mr746866.simpletuples;
 
 
-public final class Tuple6<A, B, C, D, E, F>
-{
+public final class Tuple6<A, B, C, D, E, F> {
     public final A first;
     public final B second;
     public final C third;
@@ -12,15 +11,14 @@ public final class Tuple6<A, B, C, D, E, F>
 
     // MARK:
 
-    public static <A, B, C, D, E, F> Tuple6<A, B, C, D, E, F> of(A first, B second, C third, D fourth, E fifth, F sixth)
-    {
+    public static <A, B, C, D, E, F> Tuple6<A, B, C, D, E, F> of(
+        A first, B second, C third, D fourth, E fifth, F sixth) {
         return new Tuple6<>(first, second, third, fourth, fifth, sixth);
     }
 
     // MARK:
 
-    private Tuple6(A first, B second, C third, D fourth, E fifth, F sixth)
-    {
+    private Tuple6(A first, B second, C third, D fourth, E fifth, F sixth) {
         this.first = first;
         this.second = second;
         this.third = third;
@@ -32,45 +30,42 @@ public final class Tuple6<A, B, C, D, E, F>
     // MARK:
 
     @Override
-    public boolean equals(Object o)
-    {
-        if (this == o)
-        {
+    public boolean equals(Object o) {
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass())
-        {
+
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
 
         final Tuple6<?, ?, ?, ?, ?, ?> tuple6 = (Tuple6<?, ?, ?, ?, ?, ?>) o;
 
-        if (first != null ? !first.equals(tuple6.first) : tuple6.first != null)
-        {
+        if (first != null ? !first.equals(tuple6.first) : tuple6.first != null) {
             return false;
         }
-        if (second != null ? !second.equals(tuple6.second) : tuple6.second != null)
-        {
+
+        if (second != null ? !second.equals(tuple6.second) : tuple6.second != null) {
             return false;
         }
-        if (third != null ? !third.equals(tuple6.third) : tuple6.third != null)
-        {
+
+        if (third != null ? !third.equals(tuple6.third) : tuple6.third != null) {
             return false;
         }
-        if (fourth != null ? !fourth.equals(tuple6.fourth) : tuple6.fourth != null)
-        {
+
+        if (fourth != null ? !fourth.equals(tuple6.fourth) : tuple6.fourth != null) {
             return false;
         }
-        if (fifth != null ? !fifth.equals(tuple6.fifth) : tuple6.fifth != null)
-        {
+
+        if (fifth != null ? !fifth.equals(tuple6.fifth) : tuple6.fifth != null) {
             return false;
         }
+
         return sixth != null ? sixth.equals(tuple6.sixth) : tuple6.sixth == null;
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         int result = first != null ? first.hashCode() : 0;
         result = 31 * result + (second != null ? second.hashCode() : 0);
         result = 31 * result + (third != null ? third.hashCode() : 0);
@@ -82,8 +77,7 @@ public final class Tuple6<A, B, C, D, E, F>
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Tuple6{"
             + "first=" + first
             + ", second=" + second
