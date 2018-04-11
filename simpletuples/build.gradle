@@ -10,4 +10,9 @@ tasks.withType(JavaCompile) {
 }
 
 
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
+
+
 //apply from: 'publish/publish.gradle'
